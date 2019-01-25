@@ -25,7 +25,7 @@ Using the AWS CLI tool aws configure, configure the new profile with the AWS IAM
 $ aws configure --profile name_of_new_user
 ```
 
-(Execute command from the project's root directory)
+(Execute the following command from the project's root directory):
 ```bash
 $ eb init --profile name_of_new_user
 ```
