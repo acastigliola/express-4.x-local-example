@@ -17,7 +17,7 @@ $ cd express-4.x-local-example
 $ npm install
 ```
 
-#1. Create an IAM user to handle deployments:
+# 1. Create an IAM user to handle deployments:
 Login to AWS console and open the IAM console. Select the Users option on the left side menu.  Select "Add user" and enter a username to manage your Elastic Beanstalk apps and environments.  Define permissions for the new user. Always restrict as much as possible for the permissions.  This example app only needs EB deploy capabilities.  Create a new Group called eb-full-access and assign that group to the new user.  When creating the Group Filter for "Policy type" then search for AWSElasticBeanstalkFullAccess and assign the AWS IAM Group Full Access permission to Elastic Beanstalk.  Select the rest of the default settings to create the AWS IAM Group.
 
 Using the AWS CLI tool aws configure, configure the new profile with the AWS IAM username:
@@ -31,12 +31,12 @@ $ eb init --profile name_of_new_user
 ```
 You will need to enter the "AWS Access Key ID" and "AWS Secrete Key" from the AWS IAM console.
 
-#2. Create an EB app and environment and deploy the Express Passport.JS Express local example app to Elastic Beanstalk.
+# 2. Create an EB app and environment and deploy the Express Passport.JS Express local example app to Elastic Beanstalk.
 ```bash
 $ eb create
 ```
 
-Future modifications can be redeployed with the following EB CLI command:
+# Future modifications can be redeployed with the following EB CLI command:
 ```bash
 $ eb deploy
 ```
