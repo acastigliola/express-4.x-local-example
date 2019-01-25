@@ -20,12 +20,12 @@ $ npm install
 ### 1. Create an IAM user to handle deployments:
 Login to AWS console and open the IAM console. Select the Users option on the left side menu.  Select "Add user" and enter a username to manage your Elastic Beanstalk apps and environments.  Define permissions for the new user. Always restrict as much as possible for the permissions.  This example app only needs EB deploy capabilities.  Create a new Group called eb-full-access and assign that group to the new user.  When creating the Group Filter for "Policy type" then search for AWSElasticBeanstalkFullAccess and assign the AWS IAM Group Full Access permission to Elastic Beanstalk.  Select the rest of the default settings to create the AWS IAM Group.
 
-Using the AWS CLI tool aws configure, configure the new profile with the AWS IAM username:
+Using the AWS CLI tool aws configure, configure the new profile with the AWS IAM username.
 ```bash
 $ aws configure --profile name_of_new_user
 ```
 
-(Execute the following command from the project's root directory):
+Execute the following command from the project's root directory.
 ```bash
 $ eb init --profile name_of_new_user
 ```
@@ -36,7 +36,7 @@ You will need to enter the "AWS Access Key ID" and "AWS Secrete Key" from the AW
 $ eb create
 ```
 
-### Future modifications can be redeployed with the following EB CLI command:
+### Future modifications can be redeployed with the following EB CLI command.
 ```bash
 $ eb deploy
 ```
