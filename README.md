@@ -5,7 +5,7 @@ Use this example as a starting point for your own web applications.
 
 ## Instructions
 
-#Prerequisites:
+### Prerequisites:
 You must have the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) and the [EB CLI](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html) installed.
 
 To install this example on AWS Elastic Beanstalk, clone the repository to your local environment and install
@@ -17,7 +17,7 @@ $ cd express-4.x-local-example
 $ npm install
 ```
 
-# 1. Create an IAM user to handle deployments:
+### 1. Create an IAM user to handle deployments:
 Login to AWS console and open the IAM console. Select the Users option on the left side menu.  Select "Add user" and enter a username to manage your Elastic Beanstalk apps and environments.  Define permissions for the new user. Always restrict as much as possible for the permissions.  This example app only needs EB deploy capabilities.  Create a new Group called eb-full-access and assign that group to the new user.  When creating the Group Filter for "Policy type" then search for AWSElasticBeanstalkFullAccess and assign the AWS IAM Group Full Access permission to Elastic Beanstalk.  Select the rest of the default settings to create the AWS IAM Group.
 
 Using the AWS CLI tool aws configure, configure the new profile with the AWS IAM username:
@@ -31,16 +31,14 @@ $ eb init --profile name_of_new_user
 ```
 You will need to enter the "AWS Access Key ID" and "AWS Secrete Key" from the AWS IAM console.
 
-# 2. Create an EB app and environment and deploy the Express Passport.JS Express local example app to Elastic Beanstalk.
+### 2. Create an EB app and environment and deploy the Express Passport.JS Express local example app to Elastic Beanstalk.
 ```bash
 $ eb create
 ```
 
-# Future modifications can be redeployed with the following EB CLI command:
+### Future modifications can be redeployed with the following EB CLI command:
 ```bash
 $ eb deploy
 ```
 
 Open a web browser and navigate to your Elastic Beanstalk URL to see the example in action.  Log in using username `jack` and password `secret`.
-
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/vK9dyjRnnWsMzzJTQ57fRJpH/passport/express-4.x-local-example'>  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/vK9dyjRnnWsMzzJTQ57fRJpH/passport/express-4.x-local-example.svg' /></a>
