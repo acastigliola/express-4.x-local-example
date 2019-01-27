@@ -12,7 +12,7 @@ To install this example on AWS Elastic Beanstalk, clone the repository to your l
 dependencies.
 
 ```bash
-$ git clone git@github.com:passport/express-4.x-local-example.git
+$ git clone git@github.com:acastigliola/express-4.x-local-example.git
 $ cd express-4.x-local-example
 $ npm install
 ```
